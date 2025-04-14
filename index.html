@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Raposity – Deine Bars, Dein Ausdruck</title>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: #0a0a0a;
+            color: #fff;
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            text-align: center;
+            padding: 3rem 2rem 1rem;
+            background: #111;
+            border-bottom: 2px solid #ff0077;
+        }
+
+        h1 {
+            font-family: 'Anton', sans-serif;
+            color: #ff0077;
+            font-size: 3rem;
+        }
+
+        .tagline {
+            color: #aaa;
+            font-size: 1.1rem;
+            margin-top: 0.5rem;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 2rem;
+        }
+
+        .explanation {
+            background: #1a1a1a;
+            padding: 1rem 1.5rem;
+            border-left: 4px solid #ff0077;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+
+        textarea {
+            width: 100%;
+            height: 150px;
+            padding: 1rem;
+            background: #111;
+            color: #fff;
+            border: 2px solid #ff0077;
+            border-radius: 10px;
+            font-size: 1rem;
+        }
+
+        button {
+            margin-top: 1rem;
+            padding: 1rem 2rem;
+            background: #ff0077;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background: #e6006f;
+        }
+
+        .output {
+            margin-top: 2rem;
+            font-size: 1.2rem;
+            background: #1a1a1a;
+            padding: 1rem;
+            border-radius: 8px;
+        }
+
+        .mood {
+            font-weight: bold;
+            color: #ff0077;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+            color: #777;
+            border-top: 1px solid #222;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2.4rem;
+            }
+
+            .tagline {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Raposity</h1>
+    <p class="tagline">Rap trifft auf Code. Schreib’s raus. Spür den Vibe.</p>
+</header>
+
+<div class="container">
+    <div class="explanation">
+        <p><strong>Was ist das hier?</strong></p>
+        <p>
+            <span style="color:#ff0077">Raposity</span> ist ein kreatives Tool, mit dem du deine eigenen Rap-Bars schreiben kannst.
+            Du gibst deine Zeilen ein – das System liest mit und analysiert, was für ein Vibe darin steckt.
+            Aggro, Herz, Dunkelheit oder purer Flex? Sag, was du fühlst – der Code fühlt mit.
+        </p>
+    </div>
+
+    <textarea id="rapInput" placeholder="Schreib hier deine Bars rein..."></textarea>
+    <button onclick="analyzeRap()">Analysier meine Bars</button>
+
+    <div class="output" id="resultBox" style="display:none;">
+        <p>🧠 Vibe-Analyse: <span class="mood" id="moodOutput"></span></p>
+    </div>
+</div>
+
+<footer>
+    © 2025 Hundigames – Raposity lives in code & culture.
+</footer>
+
+<script>
+    function analyzeRap() {
+        const input = document.getElementById("rapInput").value.toLowerCase();
+        const resultBox = document.getElementById("resultBox");
+        const moodOutput = document.getElementById("moodOutput");
+
+        let mood = "Neutral";
+
+        if (input.includes("krieg") || input.includes("kampf") || input.includes("hass")) {
+            mood = "Aggressiv";
+        } else if (input.includes("liebe") || input.includes("herz") || input.includes("sehnsucht")) {
+            mood = "Emotional";
+        } else if (input.includes("geld") || input.includes("high") || input.includes("kette")) {
+            mood = "Flex / Ego";
+        } else if (input.includes("nacht") || input.includes("allein") || input.includes("leere")) {
+            mood = "Dunkel / Melancholie";
+        } else if (input.trim() === "") {
+            mood = "Leer – gib mal was ein.";
+        }
+
+        moodOutput.textContent = mood;
+        resultBox.style.display = "block";
+    }
+</script>
+
+</body>
+</html>
