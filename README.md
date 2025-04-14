@@ -23,10 +23,6 @@ Die Analyse teilt die Stimmung in vier Kategorien ein:
 - **Offene Plattform:** Als Open-Source-Projekt lädt Raposity Entwickler:innen und Künstler:innen ein, eigene Features, Beats, Visuals oder weitere Analyse-Tools beizusteuern.
 - **Kulturelles Statement:** Zeigt, dass Technik nicht nur funktional, sondern auch kreativ und emotional sein kann.
 
-### Demo
-
-Eine Live-Version der Seite kannst du [hier](https://moritz1dev.github.io/raposity/) ausprobieren.
-
 ### Installation
 
 1. **Repository klonen:**
