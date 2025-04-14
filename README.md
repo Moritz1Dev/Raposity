@@ -25,7 +25,7 @@ Die Analyse teilt die Stimmung in vier Kategorien ein:
 
 ### Demo
 
-Eine Live-Version der Seite kannst du [hier](https://dein-benutzername.github.io/raposity/) ausprobieren. (Bitte passe die URL an deine Gegebenheiten an.)
+Eine Live-Version der Seite kannst du [hier](https://moritz1dev.github.io/raposity/) ausprobieren. (Bitte passe die URL an deine Gegebenheiten an.)
 
 ### Installation
 
